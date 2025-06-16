@@ -25,6 +25,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.ht
 const userRoutes = require('./server/routes/user');
 app.use('/user', userRoutes);
 
+//RECIPE ROUTES
 const reviewRoutes = require('./server/routes/review');
 app.use('/review', reviewRoutes);
 
