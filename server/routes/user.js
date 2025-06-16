@@ -18,6 +18,8 @@ router
     try {
       const user = await User.register(req.body.username, req.body.password);
       res.send({...user, password: undefined});
+        console.log("Routes:", user);
+
     } catch(error) {
       res.status(401).send({ message: error.message }); 
     }

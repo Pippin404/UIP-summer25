@@ -28,7 +28,7 @@ async function register(username, password) {
     username: username,
     password: password
   });
-  console.log("New user created:", newUser);
+  //console.log("New user created:", newUser);
 
   return newUser;
 }

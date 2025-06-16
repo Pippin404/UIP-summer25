@@ -20,13 +20,21 @@ app.use(express.static(__dirname + "/public"));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 
+
+//USER ROUTES
+const userRoutes = require('./server/routes/user');
+app.use('/user', userRoutes);
+
+const reviewRoutes = require('./server/routes/review');
+app.use('/review', reviewRoutes);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}!!`);
 });
 
 
-console.log(process.env.dbURL)
+//console.log(process.env.dbURL)
 mongoose.connect(process.env.dbURL)
 .then(console.log("Connected to MongoDB"))
 .catch(error => console.log(error));
