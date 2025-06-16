@@ -26,8 +26,8 @@ const userRoutes = require('./server/routes/user');
 app.use('/user', userRoutes);
 
 //RECIPE ROUTES
-const reviewRoutes = require('./server/routes/review');
-app.use('/review', reviewRoutes);
+//const reviewRoutes = require('./server/routes/review');
+//app.use('/review', reviewRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
