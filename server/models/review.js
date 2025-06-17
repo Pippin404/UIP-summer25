@@ -40,14 +40,21 @@ async function createReview(title, rating, review_text, user_id) {
 
 async function getUserReviews(user_id) {
   const reviews = await Review.find({ "user_id": user_id });
-  console.log("User reviews:", reviews);
+  //console.log("User reviews:", reviews);
   //probably an array
   return reviews;
 }
 
 // UPDATE
 async function updateReview(id, title, rating, review_text) {
+  //console.log("Updating Review ID:", id);
+  //console.log("New Title:", title);
+  //console.log("New Rating:", rating);
+  //console.log("New Review Text:", review_text);
+
+
   const review = await Review.updateOne({"_id": id}, {$set: { title: title, rating: rating, review_text: review_text}});
+  //console.log("Updated Review:", review);
   return review;    
 }
 
