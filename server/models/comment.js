@@ -30,6 +30,7 @@ async function getCommentsByReview(review_id) {
 
 
 async function updateComment(comment_id, comment_text) {
+  console.log("Updating comment with ID:", comment_id, "to text:", comment_text);
     const newComment = await Comment.updateOne({"_id": comment_id}, {$set: { comment_text: comment_text}});
     return newComment;
 }

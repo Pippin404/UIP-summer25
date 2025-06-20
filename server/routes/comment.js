@@ -29,6 +29,7 @@ const express = require("express");
 
     .put('/update', async (req, res) => {
             try {
+                console.log(req.body.id)
                 const updatedComment = await Comment.updateComment(req.body.id, req.body.comment_text);
                 res.send(updatedComment);
             } catch (error) {
@@ -39,7 +40,7 @@ const express = require("express");
     .delete('/delete', async (req, res) => {
             try {
                 //console.log("Delete Comment ID:", id);
-                await Comment.deleteComment(req.body);
+                await Comment.deleteComment(req.body.id);
                 res.send({ success: "Comment deleted" });
             } catch (error) {
                 res.status(500).send({ message: error.message });
