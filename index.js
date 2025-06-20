@@ -28,6 +28,10 @@ app.use('/user', userRoutes);
 const reviewRoutes = require('./server/routes/review');
 app.use('/review', reviewRoutes);
 
+const commentRoutes = require('./server/routes/comment');
+app.use('/comment', commentRoutes);
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}!!`);
