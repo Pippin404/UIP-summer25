@@ -2,7 +2,7 @@ import '../App.css';
 
 function Register(){
     return (
-        <div className="register-container">
+        <div className="register">
             <h2>Register</h2>
             <form>
                 <div className="form-group">

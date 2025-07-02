@@ -9,7 +9,6 @@ function App() {
       <Navbar />
       <Login />
       <Register />
-      <p>Hello World!</p>
     </div>
   );
 }

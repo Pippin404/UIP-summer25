@@ -3,7 +3,7 @@ import '../App.css';
 function login(){
 
     return (
-        <div className="login-container">
+        <div className="login">
             <h2>Login</h2>
             <form>
                 <div className="form-group">
